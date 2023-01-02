@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private val launcherSelectFile =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             it.data?.data?.let { uri ->
-                Log.d("TAG123", "URI = $uri ")
+                mainMV.backupDrive(uri = uri)
             }
         }
 
